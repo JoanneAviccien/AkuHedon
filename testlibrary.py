@@ -1,3 +1,9 @@
+from rich.console import Console
+from rich.table import Table
+
+table = Table()
+console = Console()
+
 expenses = [
     {"tanggal": "2025-02-01", "jumlah": 50000, "kategori": "makanan", "deskripsi": "Sarapan nasi goreng"},
     {"tanggal": "2025-02-01", "jumlah": 15000, "kategori": "transportasi", "deskripsi": "Ojek ke kantor"},
@@ -17,22 +23,14 @@ expenses = [
     {"tanggal": "2025-02-14", "jumlah": 150000, "kategori": "kesehatan", "deskripsi": "Konsultasi dokter"},
 ]
 
-
-print(expenses[0]['jumlah']) # menampilkan 'jumlah' pengeluaran yang ada di index '0'
-# print : 50000
-
-i = 0
-panjang_list = len(expenses)
-while (i < panjang_list):
-    print(expenses[i])
-    i = i + 1
+table.add_column("Tanggal", justify="center", style="cyan")
+table.add_column("Jumlah", justify="center", style="magenta")
+table.add_column("Kategori", justify="center", style="green")
+table.add_column("Deskripsi", justify="left",  style="green")
 
 i = 0
-panjang_list = len(expenses)
-while (i < panjang_list):
-    print("tanggal   : " + expenses[i]['tanggal'])
-    print("jumlah    : " + f"Rp {expenses[i]['jumlah']}")
-    print("kategori  : " + expenses[i]['kategori'])
-    print("deskripsi : " + expenses[i]['deskripsi'])
-    print("\n") # enter
+while (i < len(expenses)):
+    table.add_row(expenses[i]['tanggal'], "Rp " + str(expenses[i]['jumlah']), expenses[i]['kategori'], expenses[i]['deskripsi'])
     i = i + 1
+
+console.print(table)
