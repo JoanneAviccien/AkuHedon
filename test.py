@@ -7,11 +7,11 @@ def splash_screen():
     splash_text = """
     ==========================================
     |                                         |
-    |       EXPENSE TRACKER APPLICATION       |
-    |       Manage Your Expenses Easily       |
+    |      APLIKASI PELACAK PENGELUARAN       |
+    |   Kelola Pengeluaran Anda dengan mudah  |
     |                                         |
     ==========================================
-    |  Developer Team : Your Name             |
+    |  Developer Team : A1 Team               |
     |  Version        : 1.0                   |
     |  Loading... Please Wait                 |
     ==========================================
@@ -39,10 +39,27 @@ def open_file():
         with open(path, "r") as file:
             expenses = file.read().strip()  # Membaca isi file dan menghapus spasi atau newline
 
+def Display_menu():
+    os.system("cls")
+    Menu_text = """
+    ==========================================
+    |                                         |
+    |      APLIKASI PELACAK PENGELUARAN       |
+    |   Kelola Pengeluaran Anda dengan mudah  |
+    |                                         |
+    ==========================================
+    |                  Menu                   |
+    |  1.                   |
+    |  Loading... Please Wait                 |
+    ==========================================
+    """
+    
+
 while(True):
 
     splash_screen()
     open_file()
+    Displa
 
     expenses = [
         {"tanggal": "2025-02-01", "jumlah": 50000, "kategori": "makanan", "deskripsi": "Sarapan nasi goreng"},
