@@ -37,11 +37,10 @@ def display_menu():
     |                                         |
     |  1. Tambah Pengeluaran                  |
     |  2. Hapus Pengeluaran                   |
-    |  3. Lihat Semua Pengeluaran             |
-    |  4. Edit Pengeluaran                    |
-    |  5. Saring Pengeluaran                  |
-    |  6. Ringkasan Bulanan                   |
-    |  7. Keluar                              |
+    |  3. Edit Pengeluaran                    |
+    |  4. Saring Pengeluaran                  |
+    |  5. Ringkasan Bulanan                   |
+    |  6. Keluar                              |
     |                                         |
     ==========================================
     """)

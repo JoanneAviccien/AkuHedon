@@ -18,15 +18,13 @@ while True:
             penambahan()
         case 2:
             delete_expense()
-        case 3:
-            list_pengeluaran()
-        case 4:
+        case 2:
             edit_expenses()
-        case 5:
+        case 4:
             saring()
-        case 6:
+        case 5:
             ringkasan()
-        case 7:
+        case 6:
             print("Terima kasih telah menggunakan aplikasi!")
             break  # Keluar dari loop
 
