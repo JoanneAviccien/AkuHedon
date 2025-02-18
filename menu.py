@@ -1,5 +1,8 @@
 import os.path
 import time
+from update import update_expense
+from input import input_handler
+from delete import delete_expense as remove_expense
 
 # Fungsi untuk menampilkan splash screen sebelum munculnya tampilan menu
 def splash_screen():
@@ -22,22 +25,8 @@ def splash_screen():
     time.sleep(2)  # Menampilkan splash screen selama beberapa detik
     os.system('cls' if os.name == 'nt' else 'clear')  # Membersihkan layar setelah splash screen
 
-def open_file():
-    path = 'Pengeluaran.txt'
-
-    cek_file = os.path.isfile(path)
-
-    if not cek_file:
-        with open(path, "w") as file:
-            file.write("0")  # Menulis angka 0 jika file belum ada
-        expenses = "0"  # Karena baru ditulis, isinya pasti "0"
-    else:
-        with open(path, "r") as file:
-            expenses = file.read().strip()  # Membaca isi file dan menghapus spasi atau newline
-
 def display_menu():
-    os.system("cls" if os.name == "nt" else "clear")
-    print("""
+    print ("""
     ==========================================
     |                                         |
     |    APLIKASI PELACAK PENGELUARAN UANG    |
@@ -56,31 +45,17 @@ def display_menu():
     |                                         |
     ==========================================
     """)
-    return int(input("Pilih menu: "))
 
-def Penambahan():
+def edit_expenses():
+    no = input_handler("masukkan nomor: ")
+    tanggal = input_handler("masukkan tanggal baru: ")
+    jumlah = input_handler("masukkan jumlah baru (Rp): ")
+    kategori = input_handler("masukkan kategori baru: ")
+    deskripsi = input_handler("masukkan deskripsi baru: ")
 
+    update_expense(int(no), tanggal, jumlah, kategori, deskripsi)
+    
 
-# Program utama
-if __name__ == "__main__":
-    splash_screen()  # Tampilkan splash screen hanya sekali
-    open_file()  # Cek atau buat file data
-
-    while True:
-        pilihan = display_menu()
-        match pilihan:
-            case 1:
-                Penambahan()
-            case 2:
-                Pengurangan()
-            case 3:
-                list_pengeluaran()
-            case 4:
-                Edit_pengeluaran()
-            case 5:
-                Saring()
-            case 6:
-                Ringkasan()
-            case 7:
-                print("Terima kasih telah menggunakan aplikasi!")
-                break  # Keluar dari loop
+def delete_expense():
+    no = input_handler("Masukkan nomor yang anda ingin hapus: ")
+    remove_expense(no)
