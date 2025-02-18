@@ -40,7 +40,7 @@ def display_menu():
     print("""
     ==========================================
     |                                         |
-    |      APLIKASI PELACAK PENGELUARAN       |
+    |    APLIKASI PELACAK PENGELUARAN UANG    |
     |   Kelola Pengeluaran Anda dengan mudah  |
     |                                         |
     ==========================================
@@ -57,6 +57,9 @@ def display_menu():
     ==========================================
     """)
     return int(input("Pilih menu: "))
+
+def Penambahan():
+
 
 # Program utama
 if __name__ == "__main__":
