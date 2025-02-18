@@ -30,9 +30,9 @@ while (i < panjang_list):
 i = 0
 panjang_list = len(expenses)
 while (i < panjang_list):
-    print(expenses[i]['tanggal'])
-    print(f"Rp {expenses[i]['jumlah']}")
-    print(expenses[i]['kategori'])
-    print(expenses[i]['deskripsi'])
+    print("tanggal   : " + expenses[i]['tanggal'])
+    print("jumlah    : " + f"Rp {expenses[i]['jumlah']}")
+    print("kategori  : " + expenses[i]['kategori'])
+    print("deskripsi : " + expenses[i]['deskripsi'])
     print("\n") # enter
     i = i + 1
