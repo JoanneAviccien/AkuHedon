@@ -2,9 +2,9 @@ import os
 from sys import platform
 from expense import load_expenses
 from read import read_expenses
+from menu import display_menu, delete_expense, splash_screen, edit_expenses, summary_expenses
 from add import penambahan
 from category import saring
-from menu import display_menu, delete_expense, splash_screen, edit_expenses
 
 # program utama
 
@@ -18,7 +18,6 @@ while True:
     expenses = load_expenses()
     read_expenses(expenses)
     display_menu()
-
     try:
         pilihan = int(input("Pilih menu: "))
         match pilihan:
@@ -31,7 +30,7 @@ while True:
             case 4:
                 saring()
             case 5:
-                ringkasan()
+                summary_expenses()
             case 6:
                 print("Terima kasih telah menggunakan aplikasi!")
                 break  # Keluar dari loop
@@ -41,5 +40,3 @@ while True:
     except:
         print("\n⚠️ Peringatan: Harap masukkan angka antara 1-6! ⚠️\n")
         input("Tekan Enter untuk kembali...")
-        
-
