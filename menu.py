@@ -46,7 +46,7 @@ def display_menu():
     """)
 
 def edit_expenses():
-    no = input_handler("masukkan nomor: ")
+    no = input_handler("masukkan nomor yang ada di tabel: ")
     tanggal = input_handler("masukkan tanggal baru: ")
     jumlah = input_handler("masukkan jumlah baru (Rp): ")
     kategori = input_handler("masukkan kategori baru: ")
@@ -56,5 +56,5 @@ def edit_expenses():
     
 
 def delete_expense():
-    no = input_handler("Masukkan nomor yang anda ingin hapus: ")
+    no = input_handler("Masukkan nomor yang ada di tabel yang anda ingin hapus: ")
     remove_expense(no)

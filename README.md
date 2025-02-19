@@ -1,5 +1,5 @@
 - [x] Tambah Pengeluaran
 - [x] Hapus Pengeluaran
-- [ ] Edit Pengeluaran
+- [x] Edit Pengeluaran
 - [x] Saring Pengeluaran
 - [ ] Pengeluaran Bulanan
