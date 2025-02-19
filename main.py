@@ -18,7 +18,7 @@ while True:
             penambahan()
         case 2:
             delete_expense()
-        case 2:
+        case 3:
             edit_expenses()
         case 4:
             saring()
