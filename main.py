@@ -4,7 +4,7 @@ from expense import load_expenses
 from read import read_expenses
 from add import penambahan
 from category import saring
-from menu import display_menu, delete_expense, splash_screen, edit_expenses
+from menu import display_menu, delete_expense, splash_screen, edit_expenses, summary_expenses
 
 # program utama
 
@@ -31,7 +31,7 @@ while True:
             case 4:
                 saring()
             case 5:
-                ringkasan()
+                summary_expenses()
             case 6:
                 print("Terima kasih telah menggunakan aplikasi!")
                 break  # Keluar dari loop

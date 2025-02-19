@@ -3,6 +3,7 @@ import time
 from update import update_expense
 from input import input_handler
 from delete import delete_expense as remove_expense
+from summary import summary_expenses as all_expenses
 
 # Fungsi untuk menampilkan splash screen sebelum munculnya tampilan menu
 def splash_screen():
@@ -39,7 +40,7 @@ def display_menu():
     |  2. Hapus Pengeluaran                   |
     |  3. Edit Pengeluaran                    |
     |  4. Saring Pengeluaran                  |
-    |  5. Ringkasan Bulanan                   |
+    |  5. Ringkasan Pengeluaran               |
     |  6. Keluar                              |
     |                                         |
     ==========================================
@@ -58,3 +59,13 @@ def edit_expenses():
 def delete_expense():
     no = input_handler("Masukkan nomor yang ada di tabel yang anda ingin hapus: ")
     remove_expense(no)
+
+def summary_expenses():
+    kategori = input_handler("Masukkan kategori yang anda ingin lihat: ")
+    bln = input_handler("Masukkan bulan yang anda ingin lihat: ")
+    thn = input_handler("Masukkan tahun yang anda ingin lihat: ")
+
+    summary = all_expenses(bln, thn, kategori)
+    print("Pengeluaran untuk ", kategori," di bulan ke ", bln , " tahun ", thn, " sebanyak ", summary[0])
+    print("Persentase pengeluaran bulanan di bulan ke ", bln, " tahun ", thn, "pada kategori", kategori, "sebesar", summary[1], "%")
+    input()
