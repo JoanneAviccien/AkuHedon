@@ -1,7 +1,7 @@
 import os
 from expense import load_expenses
 from read import read_expenses
-from menu import display_menu, delete_expense, splash_screen, edit_expenses
+from menu import display_menu, delete_expense, splash_screen, edit_expenses, summary_expenses
 
 # program utama
 
@@ -18,12 +18,12 @@ while True:
             penambahan()
         case 2:
             delete_expense()
-        case 3:
+        case 2:
             edit_expenses()
         case 4:
             saring()
         case 5:
-            ringkasan()
+            summary_expenses()
         case 6:
             print("Terima kasih telah menggunakan aplikasi!")
             break  # Keluar dari loop
