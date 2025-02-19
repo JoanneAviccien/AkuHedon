@@ -14,7 +14,7 @@ while True:
     if platform == "win32":
         os.system('cls')
     elif platform == "linux" or "linux2":
-        os.syste('clear')
+        os.system('clear')
     expenses = load_expenses()
     read_expenses(expenses)
     display_menu()
